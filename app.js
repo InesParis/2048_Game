@@ -199,10 +199,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function checkForWin() {
     for (let i = 0; i < squares.length; i++) {
-      if (scoreDisplay.innerHTML == 2048) {
+      if (squares[i].innerHTML == 2048) {
         resultDisplay.innerHTML = "YOU WIN!🎉";
         document.removeEventListener("keydown", control);
         setTimeout(clear, 3000);
+        return;
       }
     }
   }
