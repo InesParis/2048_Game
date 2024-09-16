@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const gridDisplay = document.querySelector(".grid");
   const scoreDisplay = document.querySelector("#score");
-  const resultDisplay = document.querySelector("result");
+  const resultDisplay = document.querySelector("#result");
   const width = 4;
   let squares = [];
   let score = 0;
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const randomNumber = Math.floor(Math.random() * squares.length);
     if (squares[randomNumber].innerHTML == 0) {
       squares[randomNumber].innerHTML = 2;
-      checkForGameOver;
+      checkForGameOver();
     } else generate();
   }
 
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let totalOne = squares[i].innerHTML;
       let totalTwo = squares[i + width].innerHTML;
       let totalThree = squares[i + width * 2].innerHTML;
-      let totalFour = squares[i + width * 3].innerHTMLlet;
+      let totalFour = squares[i + width * 3].innerHTML;
       let column = [
         parseInt(totalOne),
         parseInt(totalTwo),
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let totalOne = squares[i].innerHTML;
       let totalTwo = squares[i + width].innerHTML;
       let totalThree = squares[i + width * 2].innerHTML;
-      let totalFour = squares[i + width * 3].innerHTMLlet;
+      let totalFour = squares[i + width * 3].innerHTML;
       let column = [
         parseInt(totalOne),
         parseInt(totalTwo),
@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function keyRight() {
     moveRight();
     combineRow();
-    moveLeft();
+    moveRight();
     generate();
   }
 
@@ -228,29 +228,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function addColours() {
     for (let i = 0; i < squares.length; i++) {
-      if (squares[i].innerHtml == 0)
+      if (squares[i].innerHTML == 0)
         squares[i].style.backgroundColor = "#afa192";
-      else if (squares[i].innerHtml == 2)
-        squares[i].style.backgroundColor = "#eee4da";
-      else if (squares[i].innerHtml == 4)
+      else if (squares[i].innerHTML == 2)
+        squares[i].style.backgroundColor = "#eee34da";
+      else if (squares[i].innerHTML == 4)
         squares[i].style.backgroundColor = "#ede0c8";
-      else if (squares[i].innerHtml == 8)
+      else if (squares[i].innerHTML == 8)
         squares[i].style.backgroundColor = "#f2b179";
-      else if (squares[i].innerHtml == 16)
+      else if (squares[i].innerHTML == 16)
         squares[i].style.backgroundColor = "#ffcea4";
-      else if (squares[i].innerHtml == 32)
+      else if (squares[i].innerHTML == 32)
         squares[i].style.backgroundColor = "#e8c064";
-      else if (squares[i].innerHtml == 64)
+      else if (squares[i].innerHTML == 64)
         squares[i].style.backgroundColor = "#ffab6e";
-      else if (squares[i].innerHtml == 128)
+      else if (squares[i].innerHTML == 128)
         squares[i].style.backgroundColor = "#fd9982";
-      else if (squares[i].innerHtml == 256)
+      else if (squares[i].innerHTML == 256)
         squares[i].style.backgroundColor = "#ead79c";
-      else if (squares[i].innerHtml == 512)
+      else if (squares[i].innerHTML == 512)
         squares[i].style.backgroundColor = "#76daff";
-      else if (squares[i].innerHtml == 1024)
+      else if (squares[i].innerHTML == 1024)
         squares[i].style.backgroundColor = "#beeaa5";
-      else if (squares[i].innerHtml == 2048)
+      else if (squares[i].innerHTML == 2048)
         squares[i].style.backgroundColor = "#d7d4f0";
     }
   }

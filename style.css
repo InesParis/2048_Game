@@ -29,7 +29,7 @@ h2 {
 .grid {
   width: 456px;
   height: 456px;
-  background-color: #bbada0;
+
   border: 7px solid #bbada0;
   border-radius: 6px;
   margin-top: 20px;
@@ -42,7 +42,7 @@ h2 {
   height: 100px;
   margin: 7px;
   background-color: #eee4fa;
-  color: #dfa86d;
+  color: #7b7772;
   font-weight: bold;
   text-align: center;
   font-size: 60px;
