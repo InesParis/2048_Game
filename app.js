@@ -138,7 +138,6 @@ document.addEventListener("DOMContentLoaded", () => {
         scoreDisplay.innerHTML = score;
       }
     }
-    checkForWin();
   }
   function combineColumn() {
     for (let i = 0; i < 12; i++) {
@@ -151,6 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
         score += combinedTotal;
         scoreDisplay.innerHTML = score;
       }
+      checkForWin();
     }
   }
   ///asign functions to keys
